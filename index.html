@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversão de moedas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Conversão de moedas</h1>
+
+    <div class="box-info">
+        <input type="number" name="input" value="" id="valor">
+        <select name="moedas" id="moedas">
+            <optgroup label="MOEDAS">
+                <option value="$">Dólar Americano (USD)</option>
+                <option value="€">Euro (EUR)</option>
+                <option value="£">Libra Esterlina (GBP)</option>
+                <option value="$">Dólar Canadense (CAD)</option>
+                <option value="$">Peso Mexicano (MXN)</option>                
+            </optgroup>
+            
+        </select>
+        <button type="button" id="btn" class="boton-elegante">Converter</button>
+    </div>
+    <h1 id="result"></h1>
+    <script src="script.js"></script>
+</body>
+</html>
