@@ -3,37 +3,30 @@ document.getElementById('btn').addEventListener('click', function(){
     const valor = document.getElementById('valor').value
     const moeda = document.getElementById('moedas').value
     var elementResultado = document.getElementById('result')
-    var resultado = 0
     elementResultado.innerHTML = '';
-
-    switch(moeda){
-        case "USD": 
-            resultado = valor * 5.61
-            console.log('$' + valor + ' = ' + resultado.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'}))
-            elementResultado.innerHTML += ` $ ${valor} = ${resultado.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}  `;
-            break;
-        case "EUR":
-            resultado = valor * 6.24
-            console.log('€' + valor + ' = ' + resultado.toLocaleString('pt-br',{style: 'currency', currency: 'EUR'}))
-            elementResultado.innerHTML += ` € ${valor} = ${resultado.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'})}`
-            break;
-        case "GBP":
-            resultado = valor * 7.37
-            console.log('£' + valor + ' = ' + resultado.toLocaleString('pt-br', {style: 'currency', currency: 'GBP'}))
-            elementResultado.innerHTML += ` £ ${valor} = ${resultado.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'})}`
-            break;
-        case "CAD":
-            resultado = valor * 4.19
-            console.log('C$' + valor + ' = ' + resultado.toLocaleString('pt-br', {style: 'currency', currency: 'CAD'}))
-            elementResultado.innerHTML += ` CA$ ${valor} = ${resultado.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'})}`
-            break;
-        case "MXN":
-            resultado = valor * 0.29
-            console.log('MX$' + valor + ' = ' + resultado.toLocaleString('pt-br', {style: 'currency', currency: 'MXN'}))
-            elementResultado.innerHTML += `MX$ ${valor} = ${resultado.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'})}`
-            
-
+    
+    function conversão(moeda, valor, valueMoeda){
+        elementResultado.innerHTML += ` ${moeda}${valor} = ${(valor * valueMoeda).toLocaleString('pt-br', {style: 'currency', currency: 'BRL'})}`
     }
+    
     console.log('Quantidade: ' + valor)
     console.log('Moeda: ' + moeda)
+    switch(moeda){
+        case "$":
+            conversão(moeda, valor, 5.60)
+            break;
+        case "€":
+            conversão(moeda, valor, 6.19)
+            break;
+        case "£":
+            conversão(moeda, valor, 7.35)
+            break;
+        case "C$":
+            conversão(moeda, valor, 4.11)
+            break;
+        case "MX$":
+            conversão(moeda, valor, 0.28)
+            break;
+    }
+
 })
