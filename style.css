@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nerko+One&display=swap');
 h1{
     font-size: 32px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -6,10 +8,21 @@ h1{
 .box-info select{
     border-radius: 30px;
     border: solid 2px black;
+    min-width: 250px;
+    min-height: 25px;
+    font-size: 18px;
 }
 .box-info optgroup{
     background-color: black;
     color: white;
+    min-width: 250px;
+    min-height: 25px;
+    font-size: 18px;
+}
+.box-info input{
+  min-width: 250px;
+  min-height: 25px;
+  font-size: 18px;
 }
 
 
@@ -52,4 +65,32 @@ h1{
     border-color: #666666;
     background: #292929;
   }
+
+  h1{
+    font-size: 38px;
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    background-color: #1a1a1a;
+    max-width: 500px;
+    
+  }
+
+  h2{
+    font-family: "Nerko One", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 40px;
+  }
+  
+  body{
+    background: url(FundoSiteMTBOM.png);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    color: white;
+  }
+
+  
   
